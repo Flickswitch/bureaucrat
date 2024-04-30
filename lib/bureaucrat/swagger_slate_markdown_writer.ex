@@ -97,7 +97,7 @@ defmodule Bureaucrat.SwaggerSlateMarkdownWriter do
   def write_models(file, swagger) do
     puts(file, "# Models\n")
 
-    Enum.each(swagger["definitions"], fn definition ->
+    Enum.each(swagger["components"], fn definition ->
       write_model(file, swagger, definition)
     end)
 
